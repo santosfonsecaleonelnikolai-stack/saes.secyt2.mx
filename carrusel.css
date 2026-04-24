@@ -1,0 +1,75 @@
+/* Estilos para el Carrusel de imágenes */
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    aspect-ratio: 2 / 1; /* o height fijo */
+}
+
+.carrusel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transition: opacity 1s ease;
+    border-radius: 12px;
+}
+
+    .carrusel img.activo {
+        opacity: 1;
+        z-index: 1;
+    }
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    z-index: 2;
+}
+
+    .btn:hover {
+        background: rgba(0,0,0,0.8);
+    }
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .indicadores button {
+        border: none;
+        background: #bbb;
+        width: 50px;
+        height: 12px;
+        border-radius: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .indicadores button.activo {
+            background: #333;
+        }
